@@ -3,6 +3,7 @@ from selenium import webdriver
 from pages.login_page import LoginPage
 from pages.logout_page import LogoutPage
 from pages.company_page import CompanyPage
+from pages.branch_page import BranchPage
 
 
 @pytest.fixture
@@ -82,5 +83,16 @@ def company_selected(logged_in_driver):
     company_page = CompanyPage(driver)
 
     company_page.select_company("Forty Four")
+
+    return driver
+
+@pytest.fixture
+def branch_selected(company_selected):
+
+    driver = company_selected
+
+    branch_page = BranchPage(driver)
+
+    branch_page.select_branch("Piliyandala-44")
 
     return driver

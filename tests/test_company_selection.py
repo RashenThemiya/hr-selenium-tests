@@ -9,5 +9,3 @@ def test_select_fourty_four(company_selected):
     print("Current URL:", driver.current_url)
 
     print("\nFORTY FOUR COMPANY SELECTION TEST PASSED")
-
-    input("\nPress ENTER to close browser...")
