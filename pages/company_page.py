@@ -10,27 +10,25 @@ class CompanyPage:
         self.driver = driver
         self.wait = WebDriverWait(driver, 30)
 
-        self.forty_four_company = (
-            By.XPATH,
-            "//*[normalize-space()='Forty Four']"
-        )
-
-    def select_forty_four(self):
+    def select_company(self, company_name):
 
         print("\n========================================")
         print("SELECTING COMPANY")
         print("========================================")
 
-        print("Waiting for Forty Four company...")
+        print(f"Waiting for company: {company_name}")
 
-        company = self.wait.until(
-            EC.element_to_be_clickable(
-                self.forty_four_company
-            )
+        company_locator = (
+            By.XPATH,
+            f"//*[normalize-space()='{company_name}']"
         )
 
-        print("Forty Four company found.")
+        company = self.wait.until(
+            EC.element_to_be_clickable(company_locator)
+        )
+
+        print(f"Company found: {company_name}")
 
         company.click()
 
-        print("Forty Four company clicked.")
+        print(f"Company selected: {company_name}")

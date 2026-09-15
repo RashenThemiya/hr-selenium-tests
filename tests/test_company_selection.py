@@ -1,12 +1,13 @@
-from pages.company_page import CompanyPage
+def test_select_fourty_four(company_selected):
 
+    driver = company_selected
 
-def test_select_forty_four(logged_in_driver):
+    print("\n========================================")
+    print("COMPANY SELECTION TEST")
+    print("========================================")
 
-    driver = logged_in_driver
+    print("Current URL:", driver.current_url)
 
-    company_page = CompanyPage(driver)
+    print("\nFORTY FOUR COMPANY SELECTION TEST PASSED")
 
-    company_page.select_forty_four()
-
-    print("\nFORTY FOUR COMPANY SELECTION TEST PASSED") 
+    input("\nPress ENTER to close browser...")
