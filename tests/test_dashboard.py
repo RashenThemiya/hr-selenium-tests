@@ -11,3 +11,5 @@ def test_dashboard(logged_in_driver):
     assert "#/super-admin/dashboard" in driver.current_url
 
     print("Dashboard test passed.")
+
+    

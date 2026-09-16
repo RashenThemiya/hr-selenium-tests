@@ -10,4 +10,3 @@ def test_select_fourty_four(branch_selected):
 
     print("\nFORTY FOUR BRANCH SELECTION TEST PASSED")
 
-    input("\nPress ENTER to close browser...")

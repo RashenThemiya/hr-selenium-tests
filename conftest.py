@@ -30,16 +30,13 @@ def login_only(driver):
 
     login_page = LoginPage(driver)
 
-    # Open login page
     login_page.open()
 
-    # Login
     login_page.login(
         "superadmin1",
         "admin1234"
     )
 
-    # Verify login
     login_page.verify_login_success()
 
     print("\n========================================")
