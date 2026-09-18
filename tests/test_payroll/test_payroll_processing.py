@@ -31,9 +31,9 @@ def test_create_payroll_run(branch_selected):
     # ENTER PAYROLL DETAILS
     # =========================================
 
-    payroll_run.enter_period_start("01/25/2026")
+    payroll_run.enter_period_start("08/25/2026")
 
-    payroll_run.enter_period_end("02/25/2026")
+    payroll_run.enter_period_end("09/25/2026")
 
     # payroll_run.enter_payroll_month("April 2026")
 
@@ -50,8 +50,26 @@ def test_create_payroll_run(branch_selected):
     payroll_run.click_present_days()
     payroll_run.enter_present_days_input("30")
     payroll_run.click_enter_inputs()
+    payroll_run.click_save_changes()
+    payroll_run.click_finalise_all()
+    payroll_run.click_next_earnings()
+    payroll_run.click_deductions()
+    payroll_run.click_reimbursements()
+    payroll_run.click_no_pay()
+    payroll_run.click_time_adj()
+    payroll_run.click_statutory()
+    payroll_run.click_generate_statutory()
+    payroll_run.click_month_tax()
+    payroll_run.click_generate_month_tax()
+    payroll_run.click_save_taxable()
+    payroll_run.click_special_earnings()
+    payroll_run.click_se_tax()
+    payroll_run.click_adjustments()
+    payroll_run.click_next_finalized()
+    payroll_run.click_finalize_payroll_run()
+    payroll_run.click_yes_finalize()
     print("\n========================================")
-    print("PAYROLL RUN DETAILS ENTERED")
+    print("PAYROLL RUN CREATED SUCCESSFULLY")
     print("========================================")
 
     input(
